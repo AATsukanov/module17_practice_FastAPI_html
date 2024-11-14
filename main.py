@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from fastapi.templating import Jinja2Templates
 import uvicorn
 
-app = FastAPI()
+app = FastAPI(swagger_ui_parameters={'tryItOutEnabled': True})
 templates = Jinja2Templates(directory='templates')
 
 messages_db = []
